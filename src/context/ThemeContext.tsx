@@ -20,7 +20,7 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
 }
 
 // Custom hooks to access theme state and dispatch
-const useTheme = (): boolean => {
+const useCurrentTheme  = (): boolean => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');
