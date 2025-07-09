@@ -22,7 +22,7 @@ const AppContent = () => {
   return (
     <>
       <GlobalStyle darkTheme={darkTheme} /> {/* Pass the theme to GlobalStyle as a prop */}
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutMe />} />
