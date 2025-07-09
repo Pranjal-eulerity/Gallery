@@ -5,6 +5,7 @@ import AboutMe from './pages/AboutMe';
 import GlobalStyle from './styles/GlobalStyles';
 import Navbar from './components/Navbar';
 import { ThemeProvider, useTheme} from './context/ThemeContext';
+import { useEffect } from 'react';
 
 const App = () => {
 
@@ -18,6 +19,10 @@ const App = () => {
 };
 const AppContent = () => {
   const darkTheme = useTheme(); // Access the current theme state
+  useEffect(() => {
+  console.log("Theme loaded");
+  document.title = "Dark Mode";
+}, []);
 
   return (
     <>
